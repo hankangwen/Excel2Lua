@@ -1,0 +1,24 @@
+更改pip的网络源
+pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/
+
+
+找到当前生效的pip.ini(pip -v config list输出的最后一个)，输入如下内容：
+
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple/
+
+[install]
+trusted-host=mirrors.aliyun.com
+
+
+再次pip -v config list可有如下输出：
+
+For variant 'env', will try loading 'F:\Python38\Scripts\confs_yk\pip.ini'
+For variant 'global', will try loading 'C:\ProgramData\pip\pip.ini'
+For variant 'site', will try loading 'f:\python38\pip.ini'
+:env:.config-file='F:\\Python38\\Scripts\\confs_yk\\pip.ini'
+global.index-url='https://mirrors.aliyun.com/pypi/simple/'
+install.trusted-host='mirrors.aliyun.com'
+————————————————
+版权声明：本文为CSDN博主「ykun089」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/ykun089/article/details/106057952/
